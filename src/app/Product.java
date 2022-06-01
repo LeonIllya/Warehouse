@@ -5,10 +5,12 @@ public class Product {
 
     private final String name;
     private final double weight;
+    private final double price;
 
-    public Product(String name, double weight) {
+    public Product(String name, double weight, double price) {
         this.name = name;
         this.weight = weight;
+        this.price = price;
     }
 
     public String getName() {
@@ -18,4 +20,6 @@ public class Product {
     public double getWeight() {
         return weight;
     }
+
+    public double getPrice(){ return price;}
 }

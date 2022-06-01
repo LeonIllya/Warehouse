@@ -28,13 +28,15 @@ public class ProductInfo {
         weight = scanner.nextDouble();
         System.out.print("Product quantity (pcs.): ");
         quantity = scanner.nextInt();
+        System.out.println("Product price (1 th.): ");
+        price = scanner.nextDouble();
         scanner.close();
     }
 
     // Обработка данных
     static private String handleData() {
 
-        product = new Product(name, weight);
+        product = new Product(name, weight, price);
         name = product.getName();
 
         totalWeight = getTotalWeight(product.getWeight(), quantity);
@@ -63,5 +65,11 @@ public class ProductInfo {
     // Метод вывода в консоль.
     static private void showInfo(String output) {
         System.out.println(output);
+    }
+
+    static private double getTotalPrice(double price, int quantity) {return price * quantity;}
+
+    static private String getTotalPriceRounded(double totalPrice) {
+        return Rounder.roundPrice(totalPrice);
     }
 }
