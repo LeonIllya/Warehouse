@@ -10,6 +10,9 @@ public class ProductInfo {
     static Product product;
     static double totalWeight;
     static String totalWeightRounded;
+    static double price;
+    static double totalPrice;
+    static String totalPriceRounded;
     static private final String MEASURE = "kg";
 
     public static void main(String[] args) {
