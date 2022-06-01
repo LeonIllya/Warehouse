@@ -28,13 +28,15 @@ public class ProductInfo {
         weight = scanner.nextDouble();
         System.out.print("Product quantity (pcs.): ");
         quantity = scanner.nextInt();
+        System.out.println("Product price (1 th.): ");
+        price = scanner.nextDouble();
         scanner.close();
     }
 
     // Обработка данных
     static private String handleData() {
 
-        product = new Product(name, weight);
+        product = new Product(name, weight, price);
         name = product.getName();
 
         totalWeight = getTotalWeight(product.getWeight(), quantity);
