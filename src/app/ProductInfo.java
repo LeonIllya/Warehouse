@@ -61,4 +61,6 @@ public class ProductInfo {
     static private void showInfo(String output) {
         System.out.println(output);
     }
+
+    static private double getTotalPrice(double price, int quantity) {return price * quantity;}
 }
