@@ -40,9 +40,14 @@ public class ProductInfo {
         totalWeight = getTotalWeight(product.getWeight(), quantity);
         totalWeightRounded = getTotalWeightRounded(totalWeight);
 
+        totalPrice = getTotalPrice(product.getPrice(), quantity);
+        totalPriceRounded = getTotalPriceRounded(totalPrice);
+
         return "------------------------\n" +
                 "Product total weight " + name + " (" + MEASURE + "): "
-                + totalWeightRounded;
+                + totalWeightRounded +
+                "\n-----------------------\n" +
+                "Product total price " + name + "  " + totalPriceRounded;
     }
 
     // Метод рассчета общего веса.
